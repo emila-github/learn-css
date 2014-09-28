@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>animation - test1</title>
+<style type="text/css">
+		
+		body { padding:0; margin:0; background: #3385ff; -moz-user-select:none;}
+		
+        #s1_ani { z-index:9; width:550px; height:430px; margin-left:20px; position: relative;}
+        #s1_ani_1 { width:385px; height:385px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_1.png") no-repeat; top:0px; left:70px;}
+        #s1_ani_2 { width:339px; height:339px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_2.png") no-repeat; top:23px; left:93px; }
+        #s1_ani_3 { width:325px; height:325px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_4.png") no-repeat; top:30px; left:100px; }
+        #s1_ani_4 { width:314px; height:314px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_5.png") no-repeat; top:35px; left:105px; }
+        #s1_ani_42{ width:118px; height:157px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_52.png") no-repeat; top:35px; left:261px; }
+        .disappear #s1_ani_4 {
+            -webkit-transform:	rotateZ(49deg);
+            -moz-transform:		rotateZ(49deg);
+            -ms-transform:		rotateZ(49deg);
+            -o-transform:		rotateZ(49deg);
+            transform:			rotateZ(49deg);
+        }
+        #s1_ani_5,#s1_ani_52 { width:9px; height:158px; display:inline-block; position:absolute; background: url("http://s1.bdstatic.com/r/www/search/is/img/s1_3.png") no-repeat; top:33px; left:257px; }
+        .disappear #s1_ani_52 {
+            -webkit-transform:	rotateZ(49deg); -webkit-transform-origin: 50% 100%;
+            -moz-transform:		rotateZ(49deg); -moz-transform-origin: 50% 100%;
+            -ms-transform:		rotateZ(49deg); -ms-transform-origin: 50% 100%;
+            -o-transform:		rotateZ(49deg); -o-transform-origin: 50% 100%;
+            transform:			rotateZ(49deg); transform-origin: 50% 100%;
+        }
+		
+		
+/*section1 大动画*/
+.active #s1_ani_1{
+	-webkit-animation: 	rotateCW 40s linear 0s infinite;
+	-moz-animation: 	rotateCW 40s linear 0s infinite;
+	-ms-animation: 		rotateCW 40s linear 0s infinite;
+	-o-animation: 		rotateCW 40s linear 0s infinite;
+	animation: 			rotateCW 40s linear 0s infinite;
+}
+.active #s1_ani_2{
+	-webkit-animation: 	rotateCCW 16s linear 0s infinite;
+	-moz-animation: 	rotateCCW 16s linear 0s infinite;
+	-ms-animation: 		rotateCCW 16s linear 0s infinite;
+	-o-animation: 		rotateCCW 16s linear 0s infinite;
+	animation: 			rotateCCW 16s linear 0s infinite;
+}
+.active #s1_ani_4{
+	-webkit-animation: 	rotateCW2 2s linear 0s both;
+	-moz-animation: 	rotateCW2 2s linear 0s both;
+	-ms-animation: 		rotateCW2 2s linear 0s both;
+	-o-animation:		rotateCW2 2s linear 0s both;
+	animation: 			rotateCW2 2s linear 0s both;
+}
+.active #s1_ani_42{
+	-webkit-animation: 	appearRoll 200ms linear 1900ms both;
+	-moz-animation: 	appearRoll 200ms linear 1900ms both;
+	-ms-animation: 		appearRoll 200ms linear 1900ms both;
+	-o-animation:		appearRoll 200ms linear 1900ms both;
+	animation: 			appearRoll 200ms linear 1900ms both;
+}
+
+.active #s1_ani_52{
+	-webkit-animation: 	rotateCW2 2s linear 0s both;
+	-webkit-transform-origin: 	50% 100%;
+	-moz-animation: 	rotateCW2 2s linear 0s both;
+	-moz-transform-origin: 		50% 100%;
+	-ms-animation: 		rotateCW2 2s linear 0s both;
+	-ms-transform-origin: 		50% 100%;
+	-o-animation: 		rotateCW2 2s linear 0s both;
+	-o-transform-origin: 		50% 100%;
+	animation: 			rotateCW2 2s linear 0s both;
+	transform-origin: 			50% 100%;
+}
+		
+/*section1-大动画*/
+@-webkit-keyframes rotateCW {
+  0%	{ -webkit-transform: rotateZ(0deg);}
+  100%	{ -webkit-transform:rotateZ(360deg);}
+}@-moz-keyframes rotateCW {
+  0%	{ -moz-transform: rotateZ(0deg);}
+  100%	{ -moz-transform: rotateZ(360deg);}
+}@-ms-keyframes rotateCW {
+  0%	{ -ms-transform: rotateZ(0deg);}
+  100%	{ -ms-transform: rotateZ(360deg);}
+}@-o-keyframes rotateCW {
+  0%	{ -o-transform: rotateZ(0deg);}
+  100%	{ -o-transform: rotateZ(360deg);}
+}@keyframes rotateCW {
+  0%	{ transform: rotateZ(0deg);}
+  100%	{ transform: rotateZ(360deg);}
+}
+
+@-webkit-keyframes rotateCW2 {
+  0%	{ -webkit-transform: rotateZ(0deg);}
+  100%	{ -webkit-transform: rotateZ(769deg);}
+}@-moz-keyframes rotateCW2 {
+  0%	{ -moz-transform: rotateZ(0deg);}
+  100%	{ -moz-transform: rotateZ(769deg);}
+}@-ms-keyframes rotateCW2 {
+  0%	{ -ms-transform: rotateZ(0deg);}
+  100%	{ -ms-transform: rotateZ(769deg);}
+}@-o-keyframes rotateCW2 {
+  0%	{ -o-transform: rotateZ(0deg);}
+  100%	{ -o-transform: rotateZ(769deg);}
+}@keyframes rotateCW2 {
+  0%	{ transform: rotateZ(0deg);}
+  100%	{ transform: rotateZ(769deg);}
+}
+
+@-webkit-keyframes rotateCCW {
+  0%	{ -webkit-transform: rotateZ(0deg);}
+  100%	{ -webkit-transform: rotateZ(-360deg);}
+}@-moz-keyframes rotateCCW {
+  0%	{ -moz-transform: rotateZ(0deg);}
+  100%	{ -moz-transform: rotateZ(-360deg);}
+}@-ms-keyframes rotateCCW {
+  0%	{ -ms-transform: rotateZ(0deg);}
+  100%	{ -ms-transform: rotateZ(-360deg);}
+}@-o-keyframes rotateCCW {
+  0%	{ -o-transform: rotateZ(0deg);}
+  100%	{ -o-transform: rotateZ(-360deg);}
+}@keyframes rotateCCW {
+  0%	{ transform: rotateZ(0deg);}
+  100%	{ transform: rotateZ(-360deg);}
+}
+/*Rotate cw half, used for s3_ani2*/
+@-webkit-keyframes rotateCWHalf {
+  0%	{ -webkit-transform: rotateZ(0deg);}
+  100%	{ -webkit-transform:rotateZ(120deg);}
+}@-moz-keyframes rotateCWHalf {
+  0%	{ -moz-transform: rotateZ(0deg);}
+  100%	{ -moz-transform: rotateZ(120deg);}
+}@-ms-keyframes rotateCWHalf {
+  0%	{ -ms-transform: rotateZ(0deg);}
+  100%	{ -ms-transform: rotateZ(120deg);}
+}@-o-keyframes rotateCWHalf {
+  0%	{ -o-transform: rotateZ(0deg);}
+  100%	{ -o-transform: rotateZ(120deg);}
+}@keyframes rotateCWHalf {
+  0%	{ transform: rotateZ(0deg);}
+  100%	{ transform: rotateZ(120deg);}
+}
+/*Rotate ccw half, used for s3_ani2*/
+@-webkit-keyframes rotateCCWHalf {
+  0%	{ -webkit-transform: rotateZ(0deg);}
+  100%	{ -webkit-transform: rotateZ(-120deg);}
+}@-moz-keyframes rotateCCWHalf {
+  0%	{ -moz-transform: rotateZ(0deg);}
+  100%	{ -moz-transform: rotateZ(-120deg);}
+}@-ms-keyframes rotateCCWHalf {
+  0%	{ -ms-transform: rotateZ(0deg);}
+  100%	{ -ms-transform: rotateZ(-120deg);}
+}@-o-keyframes rotateCCWHalf {
+  0%	{ -o-transform: rotateZ(0deg);}
+  100%	{ -o-transform: rotateZ(-120deg);}
+}@keyframes rotateCCWHalf {
+  0%	{ transform: rotateZ(0deg);}
+  100%	{ transform: rotateZ(-120deg);}
+}		
+		
+</style>
+</head>
+
+<body>
+
+
+        <div id="s1_ani">
+            <div id="s1_ani_1"></div>
+            <div id="s1_ani_2"></div>
+            <div id="s1_ani_3"></div>
+            <div id="s1_ani_4"></div>
+            <div id="s1_ani_42"></div>
+            <div id="s1_ani_5"></div>
+            <div id="s1_ani_52"></div>
+        </div>
+        
+        <input type="button" id="activeBtn" value="激活">
+        <script src="jquery.js"></script>
+        <script type="text/javascript">
+			var $s1Ani = $('#s1_ani'),
+				$activeBtn = $('#activeBtn'),
+				_oVal = $activeBtn.val();
+			$activeBtn.click(function() {
+				$s1Ani.toggleClass('disappear');
+				$s1Ani.toggleClass('active');
+				if($s1Ani.hasClass('disappear')) {
+					$activeBtn.val('暂停');
+				} else {
+					$activeBtn.val(_oVal);	
+				}
+			});
+		</script>
+</body>
+</html>
